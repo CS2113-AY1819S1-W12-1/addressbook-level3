@@ -45,6 +45,12 @@ public class ParserTest {
         final String input = "help";
         parseAndAssertCommandType(input, HelpCommand.class);
     }
+
+    @Test
+    public void remarkCommand_parsedCorrectly() {
+        final String input = "remark";
+        parseAndAssertCommandType(input, RemarkCommand.class);
+    }
     
     @Test
     public void clearCommand_parsedCorrectly() {
@@ -65,7 +71,7 @@ public class ParserTest {
     }
 
     /**
-     * Test ingle index argument commands
+     * Test single index argument commands
      */
     
     @Test
@@ -253,6 +259,7 @@ public class ParserTest {
                 new Email(Email.EXAMPLE, false),
                 new Address(Address.EXAMPLE, true),
                 new HashSet<>(Arrays.asList(new Tag("tag1"), new Tag("tag2"), new Tag("tag3")))
+              //  new Remark(Remark.EXAMPLE)
             );
         } catch (IllegalValueException ive) {
             throw new RuntimeException("test person data should be valid by definition");
