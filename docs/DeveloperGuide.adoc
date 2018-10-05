@@ -97,6 +97,35 @@ Use case ends.
 +
 Use case resumes at step 2.
 
+=== Use case: Export contacts
+
+*MSS*
+
+. User requests to export contacts.
+. AddressBook shows a list of persons and prompts user to select contacts to export.
+. User chooses contacts with specific tags in the list to export.
+. AddressBook prompts user for the filename and format (csv/vcf) of the output file.
+. User chooses a filename and format.
+. AddressBook generates the output file.
++
+Use case ends.
+
+*Extensions*
+
+* 2a. The list is empty.
++
+Use case ends.
+
+* 3a. The given index is invalid.
+** 3a1. AddressBook shows an error message.
++
+Use case resumes at step 2.
+
+* 5a. The given format is invalid.
+** 3a1. AddressBook shows an error message.
++
+Use case resumes at step 4.
+
 [appendix]
 == Non Functional Requirements
 

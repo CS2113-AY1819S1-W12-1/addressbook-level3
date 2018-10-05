@@ -154,16 +154,35 @@ Format: `clear`
 Exits the program. +
 Format: `exit`
 
-== Exporting contacts : `export`
+== Exporting all contacts : `exportall`
 
-Shows a list of all persons in the address book. +
 Export all persons in the address book to mobile phone. +
-Format: `export FILETYPE`
+Format: `exportall FILETYPE`
 
 Examples:
 
-* `export csv`
-* `export vbf`
+* `exportall csv`
+* `exportall vcf`
+
+== Exporting contacts : `export`
+
+Export the specified persons from the address book. +
+Format: `export INDEX N FILETYPE`
+
+****
+Export `N` persons starting from the specified `INDEX`.
+The index refers to the index number shown in the most recent listing.
+****
+
+Examples:
+
+* `list` +
+`export 2 1 csv` +
+Exports the 2nd person in the address book as a csv file.
+
+* `find Betsy` +
+`export 1 5 vcf` +
+Exports the five persons starting from the 1st person in the results of the `find` command as a vcf file.
 
 == Enter or delete personal weekly schedule : `schedule`
 
