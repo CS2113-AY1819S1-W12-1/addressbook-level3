@@ -75,14 +75,66 @@ Additional user stories:
 
 (For all use cases below, the *System* is the `AddressBook` and the *Actor* is the `user`, unless specified otherwise)
 
+=== Use case: Add person
+
+*MSS*
+
+. 1. User requests to add a person to the list
+. 2. AddressBook adds a new entry of the person.
++
+Use case ends.
+
+*Extensions*
+
+* 2a. The entry is invalid
+** 2a1. AddressBook shows an error message.
++
+Use case resumes at step 1.
+
+* 2a. The entry already exists
+** 2a1. AddressBook shows an error message.
++
+Use case resumes at step 1.
+
+=== Use case: List
+
+*MSS*
+
+. 1. User requests to list persons
+. 2. AddressBook shows a list of persons.
++
+Use case ends.
+
+*Extensions*
+
+* 2a. The list is empty.
++
+Use case ends.
+
+=== Use case: Find person
+
+*MSS*
+
+. 1. User requests to find persons using keyword
+. 2. AddressBook shows a list of persons matching keyword.
++
+Use case ends.
+
+*Extensions*
+
+* 2a. The persons cannot be found
+* 2a1. AddressBook shows an error message.
++
+Use case resumes at step 1.
+
 === Use case: Delete person
 
 *MSS*
 
-. User requests to list persons
-. AddressBook shows a list of persons
-. User requests to delete a specific person in the list
-. AddressBook deletes the person.
+. 1. User requests to list persons
+. 2. AddressBook shows a list of persons
+. 3. User requests to delete a specific person in the list
+. 4. AddressBook deletes the person.
 +
 Use case ends.
 
@@ -96,6 +148,90 @@ Use case ends.
 ** 3a1. AddressBook shows an error message.
 +
 Use case resumes at step 2.
+
+=== Use case: View person
+
+*MSS*
+
+. 1. User requests to list persons
+. 2. AddressBook shows a list of persons
+. 3. User requests to view non-private details of person specified by index
+. 4. AddressBook shows non-private details of person.
++
+Use case ends.
+
+*Extensions*
+
+* 2a. The list is empty.
++
+Use case ends.
+
+* 3a. The given index is invalid.
+** 3a1. AddressBook shows an error message.
++
+Use case resumes at step 2.
+
+=== Use case: Viewall person
+
+*MSS*
+
+. 1. User requests to list persons
+. 2. AddressBook shows a list of persons
+. 3. User requests to view all details of person specified by index
+. 4. AddressBook shows all details of person.
++
+Use case ends.
+
+*Extensions*
+
+* 2a. The list is empty.
++
+Use case ends.
+
+* 3a. The given index is invalid.
+** 3a1. AddressBook shows an error message.
++
+Use case resumes at step 2.
+
+=== Use case: Remark
+
+*MSS*
+
+. 1. User requests to list persons
+. 2. AddressBook shows a list of persons
+. 3. User requests to edit remarks of person specified by index
+. 4. AddressBook updates remarks of person.
++
+Use case ends.
+
+*Extensions*
+
+* 2a. The list is empty.
++
+Use case ends.
+
+* 3a. The given index is invalid.
+** 3a1. AddressBook shows an error message.
++
+Use case resumes at step 2.
+
+=== Use case: Clear
+
+*MSS*
+
+. 1. User requests to clear entries
+. 2. AddressBook clears all entries.
++
+Use case ends.
+
+=== Use case: Exit
+
+*MSS*
+
+. 1. User requests to exit program
+. 2. AddressBook is terminated.
++
+Use case ends.
 
 [appendix]
 == Non Functional Requirements

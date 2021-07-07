@@ -1,15 +1,15 @@
 package seedu.addressbook.commands;
 
-import seedu.addressbook.data.exception.IllegalValueException;
-import seedu.addressbook.data.person.*;
-import seedu.addressbook.data.tag.Tag;
+    import seedu.addressbook.data.exception.IllegalValueException;
+    import seedu.addressbook.data.person.*;
+    import seedu.addressbook.data.tag.Tag;
 
-import java.util.HashSet;
-import java.util.Set;
+    import java.util.HashSet;
+    import java.util.Set;
 
-/**
- * Adds a person to the address book.
- */
+    /**
+     * Adds a person to the address book.
+     */
 public class AddCommand extends Command {
 
     public static final String COMMAND_WORD = "add";
